@@ -83,6 +83,7 @@ module ActiveMerchant #:nodoc:
         add_address(post, options)
         add_credentials(post, options)
         add_transaction_type(post, purchase_action(source))
+        logger.debug "Purchase Post Options : #{post}"
         commit(post)
       end                       
           
