@@ -81,6 +81,7 @@ module ActiveMerchant #:nodoc:
         add_invoice(post, options)
         add_source(post, source)
         add_address(post, options)
+        add_credentials(post, options)
         add_transaction_type(post, purchase_action(source))
         commit(post)
       end                       

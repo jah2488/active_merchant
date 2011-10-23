@@ -125,6 +125,11 @@ module ActiveMerchant #:nodoc:
         post[:adjId] = reference
       end
       
+      def add_credentials(post, options)
+        post[:username] = options[:username]
+        post[:password] = options[:password]
+      end
+      
       def add_address(post, options)
         prepare_address_for_non_american_countries(options)
         
